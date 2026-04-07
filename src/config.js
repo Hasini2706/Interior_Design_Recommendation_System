@@ -1,0 +1,1 @@
+export const API_URL = "https://interior-design-recommendation-system.onrender.com";

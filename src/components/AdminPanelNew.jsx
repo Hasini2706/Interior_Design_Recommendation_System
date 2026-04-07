@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, Plus, Edit2, Trash2, Save } from 'lucide-react';
+import { API_URL } from '../config';
 
 const ROOMS = ['Living Room', 'Bedroom', 'Kitchen', 'Bathroom', 'Office', 'Dining Room'];
 const STYLES = ['Modern', 'Minimalist', 'Scandinavian', 'Bohemian'];
@@ -39,7 +40,7 @@ export default function AdminPanel({ isOpen, onClose, user }) {
 
   const fetchDesigns = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/admin/designs');
+      const response = await fetch(`${API_URL}/api/admin/designs`);
       if (!response.ok) {
         throw new Error(`Failed to load designs (${response.status})`);
       }
@@ -118,7 +119,7 @@ export default function AdminPanel({ isOpen, onClose, user }) {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/api/admin/designs/${id}`, {
+      const response = await fetch(`${API_URL}/api/admin/designs/${id}`, {
         method: 'DELETE'
       });
       if (!response.ok) {
@@ -147,8 +148,8 @@ export default function AdminPanel({ isOpen, onClose, user }) {
       };
 
       const url = editingId
-        ? `http://localhost:5000/api/admin/designs/${editingId}`
-        : 'http://localhost:5000/api/admin/designs';
+        ? `${API_URL}/api/admin/designs/${editingId}`
+        : `${API_URL}/api/admin/designs`;
 
       const response = await fetch(url, {
         method: editingId ? 'PUT' : 'POST',

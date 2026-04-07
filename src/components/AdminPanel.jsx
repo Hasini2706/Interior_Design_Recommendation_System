@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, Plus, Edit2, Trash2, Save, CheckCircle } from 'lucide-react';
+import { API_URL } from '../config';
 
 const ROOMS = ['Living Room', 'Bedroom', 'Kitchen', 'Bathroom', 'Office', 'Dining Room'];
 const STYLES = ['Modern', 'Minimalist', 'Scandinavian', 'Bohemian'];
@@ -62,7 +63,7 @@ export default function AdminPanel({ isOpen, onClose, user }) {
 
   const fetchDesigns = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/admin/designs');
+      const response = await fetch(`${API_URL}/api/admin/designs`);
       const data = await response.json();
       setDesigns(data);
     } catch (error) {
@@ -117,8 +118,8 @@ export default function AdminPanel({ isOpen, onClose, user }) {
     setLoading(true);
     try {
       const url = editingId
-        ? `http://localhost:5000/api/admin/designs/${editingId}`
-        : 'http://localhost:5000/api/admin/designs';
+        ? `${API_URL}/api/admin/designs/${editingId}`
+        : `${API_URL}/api/admin/designs`;
       
       const method = editingId ? 'PUT' : 'POST';
 
@@ -174,7 +175,7 @@ export default function AdminPanel({ isOpen, onClose, user }) {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this design?')) {
       try {
-        const response = await fetch(`http://localhost:5000/api/admin/designs/${id}`, {
+        const response = await fetch(`${API_URL}/api/admin/designs/${id}`, {
           method: 'DELETE'
         });
         if (response.ok) {

@@ -1,20 +1,52 @@
-<<<<<<< HEAD
-# React + Vite
+🏠 Interior Design Recommendation System
+📌 Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Interior Design Recommendation System is a web-based application that helps users discover suitable interior design ideas based on their preferences. The system allows users to select design filters such as room type, theme, style, and color combinations, and then displays matching interior design images stored in the database.
 
-Currently, two official plugins are available:
+The project aims to simplify the process of selecting interior designs by providing quick and relevant suggestions without requiring professional consultation. Such systems improve efficiency by organizing large design datasets and retrieving visually similar or relevant options based on user preferences.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🚀 Live Demo
 
-## React Compiler
+👉 https://interior-design-recommendation-system-1.onrender.com
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🎯 Objectives
+To help users easily find interior design ideas.
+To reduce time spent searching for suitable designs.
+To provide a simple and user-friendly interface.
+To store and retrieve interior images efficiently using database filtering.
+To allow users to explore multiple design combinations.
+🛠️ Technologies Used
+Frontend
+HTML
+CSS
+JavaScript
+Bootstrap
+Backend
+Node.js / Express (or Java Spring Boot depending on your implementation)
+REST API
+Database
+MongoDB / MySQL (depending on your project setup)
+Tools
+VS Code
+GitHub
+Render (Deployment)
+⚙️ Features
+User-friendly interface
+Filter-based design recommendation
+Displays interior design images stored as database links
+Multiple category selection (room type, theme, style)
+Responsive design for mobile and desktop
+Fast data retrieval from database
+Live deployed application
+🧠 Working Principle
+User opens the website.
+User selects design filters such as:
+Room type
+Theme
+Color
+Style
+The system processes the selected filters.
+Database is searched for matching interior images.
+Recommended interior design images are displayed to the user.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Interior_Design_Recommendation_System
->>>>>>> 30396cd7e4503d082bfaaac2987168d8c67634a0
+Recommendation systems improve user decision-making by identifying relevant design patterns and matching them with stored datasets.
